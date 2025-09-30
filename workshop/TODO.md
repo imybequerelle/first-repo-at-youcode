@@ -1,0 +1,17 @@
+- [ ] Define expanded Todo struct with id, title, description, deadline, status, creation_date, collaborators
+- [ ] Define Collaborator struct
+- [ ] Implement dynamic array for tasks
+- [ ] Implement menu function
+- [ ] Implement add task(s)
+- [ ] Implement display all tasks
+- [ ] Implement sort by name
+- [ ] Implement sort by deadline
+- [ ] Implement display tasks due in 3 days
+- [ ] Implement modify task (description, status, deadline)
+- [ ] Implement delete task by id
+- [ ] Implement search by id
+- [ ] Implement search by title
+- [ ] Implement statistics
+- [ ] Implement bonus: collaborators, file save/load
+- [ ] Update main to use menu loop
+- [ ] Compile and test
