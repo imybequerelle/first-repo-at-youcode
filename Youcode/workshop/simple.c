@@ -68,25 +68,6 @@ void sort_by_deadline(struct Todo arr[], int n) {
     }
 }
 
-// Fonction pour afficher le menu
-void display_menu() {
-    printf("\n=== Gestion de Taches ToDo ===\n");
-    printf("1. Ajouter une tache\n");
-    printf("2. Afficher toutes les taches\n");
-    printf("3. Trier par titre\n");
-    printf("4. Trier par deadline\n");
-    printf("5. Taches dues bientot\n");
-    printf("6. Modifier une tache\n");
-    printf("7. Supprimer une tache\n");
-    printf("8. Rechercher par ID\n");
-    printf("9. Rechercher par titre\n");
-    printf("10. Statistiques\n");
-    printf("11. Sauvegarder\n");
-    printf("12. Charger\n");
-    printf("0. Quitter\n");
-    printf("Choix: ");
-}
-
 // Fonction pour ajouter une tache
 void add_task(struct Todo **todos, int *count, int *next_id) {
     *todos = realloc(*todos, (*count + 1) * sizeof(struct Todo));
@@ -111,7 +92,7 @@ void display_tasks(struct Todo *todos, int count) {
         printf("Aucune tache.\n");
         return;
     }
-    printf("\nListe des taches:\n");
+    printf("\n Liste des taches: \n");
     for (int i = 0; i < count; i++) {
         printf("ID: %d\nTitre: %s\nDescription: %s\nDeadline: %s\nCreation: %s\nStatut: %s\n\n",
                todos[i].id, todos[i].title, todos[i].description, todos[i].deadline,
@@ -248,13 +229,30 @@ void load_tasks(struct Todo **todos, int *count, int *next_id) {
     printf("Taches chargees.\n");
 }
 
+// Fonction pour afficher le menu
+void display_menu() {
+    printf("\n=== Gestion de Taches ToDo ===\n");
+    printf("1. Ajouter une tache\n");
+    printf("2. Afficher toutes les taches\n");
+    printf("3. Trier par titre\n");
+    printf("4. Trier par deadline\n");
+    printf("5. Taches dues bientot\n");
+    printf("6. Modifier une tache\n");
+    printf("7. Supprimer une tache\n");
+    printf("8. Rechercher par ID\n");
+    printf("9. Rechercher par titre\n");
+    printf("10. Statistiques\n");
+    printf("11. Sauvegarder\n");
+    printf("12. Charger\n");
+    printf("0. Quitter\n");
+    printf("Choix: ");
+}
+
 /************************************************* Main : ****************************************************/
 int main() {
-    struct Todo *todos = NULL;
-    int count = 0;
-    int next_id = 1;
-    int choice;
-
+    struct Todo *todos = NULL;            int next_id = 1;
+    int count = 0;                        int choice;
+   
     load_tasks(&todos, &count, &next_id);
 
     do {
