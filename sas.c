@@ -1,12 +1,12 @@
-#include <stdio.h>
+#include <stdio.h>                                  
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_ANIMAUX 200
-#define NOM_LEN 50
-#define ESPECE_LEN 30
-#define HABITAT_LEN 30
-
+ #define MAX_ANIMAUX 200
+ #define NOM_LEN 50
+ #define ESPECE_LEN 30
+ #define HABITAT_LEN 30
+ 
 typedef struct {
     int id;
     char nom[NOM_LEN];
@@ -22,7 +22,7 @@ int count_animaux = 0;
 int next_id = 1;
 
 void pause() {
-    printf("\nAppuyez sur Entrée pour continuer...");
+    printf("\n Appuyez sur Entrée pour continuer...");
     while (getchar() != '\n');
 }
 
@@ -163,7 +163,7 @@ int main() {
     init_sample_data();
     while (1) {
         printf("\n=== MENU ZOO ===\n");
-        printf("1. Ajouter\n2. Afficher\n3. Modifier\n4. Supprimer\n5. Rechercher\n6. Statistiques\n7. Quitter\nChoix: ");
+        printf("1. Ajouter un animal \n 2. Afficher un animal \n 3. Modifier un animal \n 4. Supprimer un animal \n 5. Rechercher un animal \n 6. Statistiques\n 7. Quitter \n Choix: ");
         int choix; scanf("%d", &choix); getchar();
         switch (choix) {
             case 1: ajouter_animal(); break;
